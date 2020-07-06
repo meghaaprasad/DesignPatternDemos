@@ -6,7 +6,13 @@ namespace FactoryPatternSample
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            Console.WriteLine("Factory Pattern");
+            PizzaFactory factory = new PizzaFactoryImplementation();
+            Pizza pizza=factory.GetFactory("CheeseBurst");
+            pizza.PrintName();
+            Pizza pizza2 = factory.GetFactory("DeepDish");
+            pizza2.PrintName();
+            Console.ReadLine();
         }
     }
 }
